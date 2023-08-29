@@ -1,0 +1,9 @@
+Simple Django Hello World Starter Template
+A basic Django 3.0 starter project.
+
+Usage
+Using Python 3.8, run python -m venv env to create a virtual environment
+Run pip install -r requirements.txt to install dependencies
+Run cd app/ to change to app/
+Run python manage.py runserver to start development server
+Navigate to http://127.0.0.1:8000 to test
