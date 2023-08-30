@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+   
+
+    <link type="text/css" rel="stylesheet" href="{% static 'mystyle.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+   <title>Registration Screen</title>
+
+    <nav id="nav">
+        
+      <span>{{ username_is }}</span>
+      <a href="{% url 'home'%}" class="active">Home</a>
+      <a href="{% url 'destinations'%}">Destination</a>
+      <a href="#">About Us</a>
+      <a href="{% url 'contact'%}">Contact Us</a>
+      
+      <a href="{% url 'registration'%}">Sign In</a>
+    </nav>
+
+   <body>
+      <nav id="nav">
+         
+       <span>Daisy's Voyage</span>
+       <a href="" class="active">Home</a>
+       <a href="#">Selection</a>
+       <a href="#">About Us</a>
+       <a href="#">Contact Us</a>
+       
+       <a href="{% url 'registration'%}">Sign In</a>
+     </nav>
+      <div>
+      <h1> Register </h1>
+         <div class="container">
+           <form method='POST' action='registration'>
+               {% csrf_token %}
+                  {{form.as_p}}
+           
+             <input type='submit' value="Register">
+           </form>
+           </div>
+         <div>
+         Already have an account?<a href='{% url 'login' %}'>Sign In Here</a>
+         </div>
+      </div>
+   </body>
+</html>
